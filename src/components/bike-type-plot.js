@@ -5,7 +5,7 @@ export function bike_type_plot(data, {width} = {}) {
     // if needed, variables can be created here
 
     return Plot.plot({
-        title: // CHALLENGE 7.1 - Your code here ,
+        // title: // CHALLENGE 7.1 - Your code here ,
         marks: [
             // CHALLENGE 7.2
             // Your code here
@@ -23,4 +23,8 @@ export function bike_type_plot(data, {width} = {}) {
             // Your code here
         }
     })
+}
+
+export function testFunction() {
+    console.log("Test function called");
 }
