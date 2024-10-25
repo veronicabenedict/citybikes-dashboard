@@ -1,5 +1,3 @@
-<!-- PROVIDED: This controls the theme of the page! [OPTIONAL] Feel free to change and play around with the theme to find one you like for this page! -->
-<!-- HINT: Reference the documentation given in the instructions! -->
 ---
 toc: false
 theme: [light, wide, alt, cotton]
@@ -26,13 +24,13 @@ import {station_demand_plot} from "./components/station-demand-plot.js";
 ```js
 // loads the network data from the data loader
 // this returns an array!
-const network_array = // your code here
+const network_array = FileAttachment('./data/network.json').json();
 ```
 
 ```js
 // loads the stations data from the data loader
 // this returns a Map!
-const stations_map = // your code here
+const stations_map = FileAttachment('./data/stations.json').json();
 ```
 
 
