@@ -8,13 +8,13 @@ async function json(url) {
 // Variable to store the returned json from the API
 const pgh_network = await json(`https://api.citybik.es/v2/networks/pittsburgh`);
 
-//helper function to display the data
-function display(network_data) {
-console.log("Network Data:");
-network_data.forEach((value, key) => {
-    console.log(`${key}: ${value}`);
-});
-}
+// //helper function to display the data
+// function display(network_data) {
+// console.log("Network Data:");
+// network_data.forEach((value, key) => {
+//     console.log(`${key}: ${value}`);
+// });
+// }
 
 // Function to parse the data and place it into a dictionary
 function parse_network(data){
@@ -29,7 +29,7 @@ function parse_network(data){
   network_data.set('city', data.network.location.city);
   network_data.set('latitude',data.network.location.latitude);
   network_data.set('longitude',data.network.location.longitude);
-  display(network_data)
+  // display(network_data)
   // Convert the Map to a plain object that can be indexed into similar to a dictionary and an array before returning
   return Object.fromEntries(network_data);
 }
@@ -39,5 +39,3 @@ const network_info = parse_network(pgh_network);
 
 // used for getting the output quickly in the terminal, equivalent to CURL
 process.stdout.write(JSON.stringify(network_info));
-
-export const networkData = network_info;

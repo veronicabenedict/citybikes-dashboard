@@ -19,13 +19,13 @@ theme: [light, wide, alt, cotton]
 ```js
 // loads the network data from the data loader
 // this returns an array!
-const network_info = // your code here
+const network_info = FileAttachment('./data/network.json').json();
 ```
 
 ```js
 // loads the stations data from the data loader
 // this returns a Map!
-const stations = // your code here
+const stations = FileAttachment('./data/stations.json').json();
 ```
 
 
@@ -35,7 +35,19 @@ const stations = // your code here
 <!-- HINT: You will have to use string interpolation like this `This is a ${interpolated_value}`! -->
 <!-- HINT: Reference the .set() method documentation for getting data from a Map in JS linked in the instructions. ! -->
 
-<div class="grid grid-cols-2">
-    <div class="card" style="text-align: center;">See the <a href="/bike-types.html"><b>bike types dashboard page</b></a> for information on bike type availability at each of the stations in the network.</div>
-    <div class="card" style="text-align: center;">See the <a href="/station-demand.html"><b>station demand visualization page</b></a> for information on the demand of the stations in the network.</b>.</div>
+<div class="grid grid-cols-3">
+    <div class="card" style="text-align: center;">
+        <h3>Number of Stations</h3>
+        <p>This network has ${Object.keys(stations).length} bike stations</p>
+    </div>
+    <div class="card" style="text-align: center;">
+        <h3>Network Information</h3>
+        <p>The network is located in ${network_info.city} and is called ${network_info.name}.</p>
+    </div>
+    <div class="card" style="text-align: center;">
+        <h3>Network Location</h3>
+        <p>The network is located at ${network_info.longitude} longitude and ${network_info.latitude} latitude.</p>
+    </div>
+
+
 </div>

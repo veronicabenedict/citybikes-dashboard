@@ -25,7 +25,6 @@ async function json(url) {
           station_info.set("empty_slots", station.empty_slots);
           station_info.set("normal_bikes", station.extra.normal_bikes);
           station_info.set("ebikes", station.extra.ebikes);
-          console.log(station_info);
           // Adds to the station_data dictionary with the key-value pair of name:info (where info is a dictionary)
           station_data.set(station.name, station_info);
       });
@@ -49,4 +48,3 @@ async function json(url) {
   // used for getting the output quickly in the terminal, equivalent to CURL
   process.stdout.write(JSON.stringify(stations));
 
-  export const stationData = stations;
