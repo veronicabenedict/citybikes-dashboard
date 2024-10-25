@@ -5,12 +5,12 @@ export function station_demand_plot(network_data, station_data, {width} = {}) {
     // if needed, variables can be created here
 
     return Plot.plot({
-        title: `Station Demand in the ${network_data["name"]}`,
+        title: `Station Demand in the ${network_data["name"]} Bike-Sharing Network`,
         marks: [
-            Plot.barY(station_data, {x:"name",y: "empty_slots", tooltip: true, sort: {x: "y"}}),
+            Plot.barY(station_data, {x:"name",y: "empty_slots", tip: true, sort: {x: "y"}}),
             // CHALLENGE 6.2
             // Your code here
-            Plot.axisY({tickCount: 22, interval: 1, tickSpacing: 20})
+            Plot.axisY({tickCount: 22, interval: 1, tickSpacing: 20, labelAnchor: "center"})
         ],
         x: {
             // CHALLENGE 6.3

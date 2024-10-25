@@ -44,8 +44,7 @@ const selected_station = view(Inputs.select(Array.from(stations_m.keys()), {labe
 <!-- PROVIDED code: Displays the visualization you made in bike-type-plot.js.-->
 
 ```js
-console.log(selected_station)
-const free_bikes_available = selected_station.get("free_bikes");
+const free_bikes_available = stations_m.get("free_bikes");
 ```
 
 <div class="grid grid-cols-1">
@@ -53,7 +52,7 @@ const free_bikes_available = selected_station.get("free_bikes");
   <!-- conditionally displays a message or a visualization depending on bike availability at selected station -->
     ${free_bikes_available === 0 
       ? html`<h2 style="color: red;"> 🚫 There are no bikes available currently at this station. 🚫</h2>`
-      : bike_type_plot(selected_station)}
+      : bike_type_plot(stations_map[selected_station])}
 
   </div>
 </div>

@@ -35,17 +35,17 @@ const stations = FileAttachment('./data/stations.json').json();
 
 <div class="grid grid-cols-3">
     <div class="card" style="text-align: center;">
-        <h3>Number of Stations</h3>
-        <p>This network has ${Object.keys(stations).length} bike stations</p>
+        <p>There are <b>${Object.keys(stations).length}</b> bike stations.</p>
     </div>
     <div class="card" style="text-align: center;">
-        <h3>Network Information</h3>
-        <p>The network is located in ${network_info.city} and is called ${network_info.name}.</p>
+        <p>The network in <b>${network_info.city}</b> is called <b>${network_info.name}</b>.</p>
     </div>
     <div class="card" style="text-align: center;">
-        <h3>Network Location</h3>
-        <p>The network is located at ${network_info.longitude} longitude and ${network_info.latitude} latitude.</p>
+        <p>The network is located at <b>${network_info.longitude}</b>, <b>${network_info.latitude}</b>.</p>
     </div>
+</div>
 
-
+<div class="grid grid-cols-2">
+    <div class="card" style="text-align: center;">See the <a href="/bike-types.html"><b>bike types dashboard page</b></a> for information on bike type availability at each of the stations in the network.</div>
+    <div class="card" style="text-align: center;">See the <a href="/station-demand.html"><b>station demand visualization page</b></a> for information on the demand of the stations in the network.</b>.</div>
 </div>
