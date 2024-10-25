@@ -30,7 +30,7 @@ const network_array = FileAttachment('./data/network.json').json();
 ```js
 // loads the stations data from the data loader
 // this returns a Map!
-const stations_map = FileAttachment('./data/stations.json').json();
+const stations = FileAttachment('./data/stations.json').json();
 ```
 
 
